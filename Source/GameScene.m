@@ -94,13 +94,13 @@
 
 - (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair playerCollision:(CCNode *)player pipeCollision:(CCNode *)pipe
 {
-    [player removeFromParent];
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainMenu"]];
     return YES;
 }
 
 - (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair playerCollision:(CCNode *)player floorCollision:(CCNode *)floor
 {
-    //[player removeFromParent];
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainMenu"]];
     return YES;
 }
 

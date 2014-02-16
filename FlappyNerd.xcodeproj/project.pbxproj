@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		282D85B718B01E7500304C2C /* Bentley.m in Sources */ = {isa = PBXBuildFile; fileRef = 282D85B618B01E7500304C2C /* Bentley.m */; };
+		28699DDB18B17E99009B2228 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 28699DDA18B17E99009B2228 /* MainMenu.m */; };
 		28DD922318B0475600122316 /* PipeEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DD922218B0475600122316 /* PipeEdge.m */; };
 		28DD922718B0477B00122316 /* PipeBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DD922618B0477B00122316 /* PipeBody.m */; };
 		28DD923018B047D000122316 /* Pipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DD922F18B047D000122316 /* Pipe.m */; };
@@ -61,6 +62,8 @@
 /* Begin PBXFileReference section */
 		282D85B518B01E7500304C2C /* Bentley.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bentley.h; sourceTree = "<group>"; };
 		282D85B618B01E7500304C2C /* Bentley.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bentley.m; sourceTree = "<group>"; };
+		28699DD918B17E99009B2228 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenu.h; path = Source/MainMenu.h; sourceTree = "<group>"; };
+		28699DDA18B17E99009B2228 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenu.m; path = Source/MainMenu.m; sourceTree = "<group>"; };
 		28DD922118B0475600122316 /* PipeEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PipeEdge.h; path = Source/PipeEdge.h; sourceTree = "<group>"; };
 		28DD922218B0475600122316 /* PipeEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PipeEdge.m; path = Source/PipeEdge.m; sourceTree = "<group>"; };
 		28DD922518B0477B00122316 /* PipeBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PipeBody.h; path = Source/PipeBody.h; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				28DD922618B0477B00122316 /* PipeBody.m */,
 				28DD922E18B047D000122316 /* Pipe.h */,
 				28DD922F18B047D000122316 /* Pipe.m */,
+				28699DD918B17E99009B2228 /* MainMenu.h */,
+				28699DDA18B17E99009B2228 /* MainMenu.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -345,6 +350,7 @@
 				28DD922718B0477B00122316 /* PipeBody.m in Sources */,
 				28DD922318B0475600122316 /* PipeEdge.m in Sources */,
 				282D85B718B01E7500304C2C /* Bentley.m in Sources */,
+				28699DDB18B17E99009B2228 /* MainMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

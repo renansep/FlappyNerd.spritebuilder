@@ -16,5 +16,8 @@
     CCNode *bentley;
     NSMutableArray *pipes;
     int pipesCount;
+    
+    int score;
+    CCLabelTTF *labelScore;
 }
 @end

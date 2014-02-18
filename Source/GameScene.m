@@ -31,6 +31,8 @@
     bentley.physicsBody.collisionType = @"playerCollision";
     
     pipes = [[NSMutableArray alloc] init];
+
+    score = 0;
     
     self.userInteractionEnabled = YES;
 }
@@ -84,11 +86,22 @@
             pipesCount--;
         }
     }
+    
+    score++;
+    if (score < 10)
+    {
+        [labelScore setString:[NSString stringWithFormat:@"0%d", score]];
+    }
+    else
+    {
+        [labelScore setString:[NSString stringWithFormat:@"%d", score]];
+    }
+    
 }
 
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    [bentley.physicsBody setVelocity:ccp(0,0)];
+    [bentley.physicsBody setVelocity:ccp(0,bentley.physicsBody.velocity.y / 2)];
     [bentley.physicsBody applyImpulse:ccp(0, 200)];
 }
 

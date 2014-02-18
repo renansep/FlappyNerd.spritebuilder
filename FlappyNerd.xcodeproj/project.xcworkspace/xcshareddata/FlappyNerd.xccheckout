@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6017527D-08FC-4541-8E18-48467C40B453</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FlappyNerd</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>21043EA9-F5C6-417E-AADE-A33D87C32328</key>
+		<string>https://github.com/renansep/FlappyNerd.spritebuilder.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FlappyNerd.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>21043EA9-F5C6-417E-AADE-A33D87C32328</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/renansep/FlappyNerd.spritebuilder.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>21043EA9-F5C6-417E-AADE-A33D87C32328</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>21043EA9-F5C6-417E-AADE-A33D87C32328</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FlappyNerd</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -15,6 +15,7 @@
     int height;
     NSMutableArray *body;
     PipeEdge *edge;
+    CCNode *scoreSensor;
 }
 
 @property int height;

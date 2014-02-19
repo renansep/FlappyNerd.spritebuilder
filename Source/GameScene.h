@@ -19,5 +19,8 @@
     
     int score;
     CCLabelTTF *labelScore;
+    
+    int pipeMaxSize;
+    int pipeSpace;
 }
 @end

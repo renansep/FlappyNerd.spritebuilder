@@ -18,13 +18,13 @@
     
     [physics setGravity:ccp(0,-750)];
     physics.collisionDelegate = self;
-    //physics.debugDraw = YES;
+    //.debugDraw = YES;
     
     floor.physicsBody.collisionType = @"floorCollision";
     floor.physicsBody.collisionGroup = @"obstacleGroup";
     
     bentley = [CCBReader load:@"Bentley"];
-    [bentley setPosition:ccp(100, self.contentSize.height / 2)];
+    [bentley setPosition:ccp(100, self.contentSize.height / 1.25)];
     [physics addChild:bentley];
     [bentley.physicsBody setAllowsRotation:NO];
     bentley.physicsBody.collisionGroup = @"playerGroup";
@@ -33,6 +33,9 @@
     pipes = [[NSMutableArray alloc] init];
 
     score = 0;
+    pipeSpace = 250;
+    
+    pipeMaxSize = 9;
     
     self.userInteractionEnabled = YES;
 }
@@ -54,18 +57,18 @@
         
         if (lastPipe != nil)
         {
-            p = [[Pipe alloc] initWithMaxHeight:9];
-            [p setPosition:ccp(lastPipe.position.x + 200, floor.position.y + floor.contentSize.height / 2 + p.contentSize.height / 2)];
+            p = [[Pipe alloc] initWithMaxHeight:pipeMaxSize];
+            [p setPosition:ccp(lastPipe.position.x + pipeSpace, floor.position.y + floor.contentSize.height / 2 + p.contentSize.height / 2)];
         
-            q =[[Pipe alloc] initWithHeight:10 - [p height]];
-            [q setPosition:ccp(lastPipe.position.x + 200, self.contentSize.height - q.contentSize.height / 2)];
+            q =[[Pipe alloc] initWithHeight:pipeMaxSize + 1 - [p height]];
+            [q setPosition:ccp(lastPipe.position.x + pipeSpace, self.contentSize.height - q.contentSize.height / 2)];
         }
         else
         {
-            p = [[Pipe alloc] initWithMaxHeight:9];
+            p = [[Pipe alloc] initWithMaxHeight:pipeMaxSize];
             [p setPosition:ccp(400, floor.position.y + floor.contentSize.height / 2 + p.contentSize.height / 2)];
             
-            q =[[Pipe alloc] initWithHeight:10 - [p height]];
+            q =[[Pipe alloc] initWithHeight:pipeMaxSize + 1 - [p height]];
             [q setPosition:ccp(400, self.contentSize.height - q.contentSize.height / 2)];
         }
         
@@ -86,8 +89,7 @@
             pipesCount--;
         }
     }
-    
-    score++;
+
     if (score < 10)
     {
         [labelScore setString:[NSString stringWithFormat:@"0%d", score]];
@@ -114,6 +116,34 @@
 - (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair playerCollision:(CCNode *)player floorCollision:(CCNode *)floor
 {
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainMenu"]];
+    return YES;
+}
+
+- (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair playerCollision:(CCNode *)player scoreCollision:(CCNode *)scoreSensor
+{
+    score++;
+    [scoreSensor removeFromParent];
+    
+    switch (score) {
+        case 5:
+            pipeSpace -= 50;
+            pipeMaxSize++;
+            break;
+            
+        case 10:
+            pipeSpace -= 25;
+            pipeMaxSize++;
+            break;
+            
+        case 15:
+            pipeSpace -= 25;
+            pipeMaxSize++;
+            break;
+            
+        default:
+            break;
+    }
+    
     return YES;
 }
 

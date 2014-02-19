@@ -40,6 +40,13 @@
         
         edge.physicsBody.collisionType = @"pipeCollision";
         
+        scoreSensor = [[CCNode alloc] init];
+        scoreSensor.physicsBody = [CCPhysicsBody bodyWithRect:CGRectMake(edge.position.x, 0, 10, 320) cornerRadius:0];
+        scoreSensor.physicsBody.sensor = YES;
+        scoreSensor.physicsBody.collisionType = @"scoreCollision";
+        scoreSensor.physicsBody.affectedByGravity = NO;
+        [self addChild:scoreSensor];
+        
         [self addChild:edge];
     }
     return self;
@@ -85,6 +92,7 @@
         [pb setPosition:ccp(pb.position.x - 100*delta, pb.position.y)];
     }
     [edge setPosition:ccp(edge.position.x - 100*delta, edge.position.y)];
+    [scoreSensor setPosition:ccp(scoreSensor.position.x - 100*delta, scoreSensor.position.y)];
     [self setPosition:ccp(self.position.x - 100*delta, self.position.y)];
 }
 
